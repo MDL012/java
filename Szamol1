@@ -1,0 +1,31 @@
+import java.util.Scanner;;
+
+public class Szamol1{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("");
+        System.out.println("----------------------------------------");
+        System.out.println("");
+        System.out.print("Kérek egy számot: ");
+        int sz_1 = s.nextInt();
+        
+        System.out.println("");
+        System.out.println("----------------------------------------");
+        System.out.println("");
+
+
+        for (int i = 0; i< (sz_1*10);i++){
+            int sz_2 = (int)((Math.random()*99)+1);
+            if (i%sz_1 == 0){
+                continue;
+            }
+            else{
+                System.out.println(sz_2);
+            }
+        }
+        System.out.println("");
+        System.out.println("----------------------------------------");
+        System.out.println("");
+    }
+}
