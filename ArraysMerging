@@ -1,0 +1,40 @@
+public class ArraysMerging{
+    public static void main(String[] args){
+        int[] arr1 = { 12, 45, 67, 89, 100, 23, 3456, 897, 452, 444, 899, 700 };
+        int[] arr2 = { 10, 324, 45, 90, 9808 };
+        int db_1 = arr1.length + arr2.length;
+        int[] szt_1 = new int[db_1];
+        for (int i = 0; i < db_1; i++){
+            if (i >= arr1.length){
+                int k = i - arr1.length;
+                szt_1[i] = arr2[k];
+            }
+            else{
+                szt_1[i] = arr1[i];
+            }
+        }
+
+        System.out.println("");
+        System.out.println("----------------------------------------");
+        System.out.println("");
+
+        System.out.print("arr1: ");
+        for (int i = 0; i < arr1.length; i++){
+            System.out.print(arr1[i] + ", ");
+        }
+        System.out.println("");
+        System.out.print("arr2: ");
+        for (int i = 0; i < arr2.length; i++){
+            System.out.print(arr2[i] + ", ");
+        }
+        System.out.println("");
+        System.out.print("Mind kettő: ");
+        for (int i = 0; i < szt_1.length; i++){
+            System.out.print(szt_1[i] + ", ");
+        }
+
+        System.out.println("");
+        System.out.println("----------------------------------------");
+        System.out.println("");
+    }
+}
