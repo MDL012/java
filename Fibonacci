@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Fibonacci{
+
+    public static int szam(int A){
+        int sz_1 = 1;
+        int sz_2 = 1;
+        int sz_3 = 0;
+        if (A <= 2){
+            sz_3 = 1;
+        }
+        else{
+            for (int i = 3; i <= A; i++) {
+                sz_3 = sz_1+sz_2;
+                sz_1 = sz_2;
+                sz_2 = sz_3;
+            }
+        }
+        return sz_3;
+    }
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("----------------------------|");
+        System.out.print("Kérek egy számót: ");
+        int sz_0 = s.nextInt();
+
+        System.out.println("");
+        System.out.println("Eredmény: " + szam(sz_0));
+
+        System.out.println("----------------------------|");
+        System.out.println("");
+        
+    }
+}
