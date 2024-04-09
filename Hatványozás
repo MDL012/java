@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Hatványozás{
+
+    public static int szam(int A, int B){
+
+        int sz_osz = 1;
+        for (int i = 1; i <= B; i++){
+            sz_osz*=A;
+        }
+        return sz_osz;
+    }
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("----------------------------|");
+        System.out.print("Kérek egy számót: ");
+        int sz_0 = s.nextInt();
+        System.out.print("Kérek egy másik számót: ");
+        int sz_1 = s.nextInt();
+
+        System.out.println("");
+        System.out.println("Eredmény: " + szam(sz_0,sz_1));
+
+        System.out.println("----------------------------|");
+        System.out.println("");
+        
+    }
+}
