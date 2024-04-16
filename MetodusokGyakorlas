@@ -1,0 +1,90 @@
+public class MetodusokGyakorlas{
+
+    public static String szogElnevezes(Double A){
+        String B = "";
+        if (A == 0){
+            B = "nullszög";
+        }
+        else if (A > 0 && A < 90){
+            B = "hegyes szög";
+        }
+        else if (A == 90){
+            B = "derék szög";
+        }
+        else if (A > 90 && A < 180){
+            B = "tompa szög";
+        }
+        else if (A == 180){
+            B = "egyenes szög";
+        }
+        else if (A > 180 && A < 360){
+            B = "homorú szög";
+        }
+        else if (A == 360){
+            B = "teljes szög";
+        }
+        else if (A > 360){
+            B = "nagyobb, mint a teljes szög";
+        }
+        else{
+            B = "negatín szög";
+        }
+        return B;
+    }
+    public static Boolean hasEightTheSqrt(int A){
+        Boolean B = false;
+        String a = "";
+        a += Math.sqrt(A);
+        if (a.indexOf("8") > 0) {
+            B = true;
+        }
+        return B;
+    }
+    public static Boolean isValidPassword(String A){
+        Boolean B = false;
+        String a = ".-*#@!";
+        Boolean jel = false;
+        Boolean sz_0 = false;
+        Boolean sz_k = false;
+        Boolean sz_k2 = false;
+        Boolean sz_N = false;
+        Boolean sz_N2 = false;
+        for(int i = 0; i < a.length();i++){
+            if(A.indexOf(a) > 0){
+                jel = true;
+            }
+        }
+        a = "0123456789";
+        for(int i = 0; i < a.length(); i++){
+            if(A.indexOf(a) > 0){
+                sz_0 = true;
+            }
+        }
+        a = "qwertzuiopőúasdfghjkléáűíyxcvbnmöüó";
+        for(int i = 0; i < a.length(); i++){
+            if(A.indexOf(a) > 0){
+                sz_k = true;
+            }
+            if(A.indexOf(a) > 0 && sz_k){
+                sz_k2 = true;
+            }
+        }
+        a = a.toUpperCase();
+        for(int i = 0; i < a.length(); i++){
+            if(A.indexOf(a) > 0){
+                sz_N = true;
+            }
+            if(A.indexOf(a) > 0 && sz_N){
+                sz_N2 = true;
+            }
+        }
+        if (jel && sz_0 && sz_k && sz_k2 && sz_N && sz_N2){
+            B =true;
+        }
+        return B;
+    }
+    public static void main(String[] args){
+         
+
+    }
+}
