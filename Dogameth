@@ -1,0 +1,81 @@
+package Dolgozat;
+
+public class MetodusokDolgozat {
+    public static int signOfTheNumber(int sz_1){
+        int sz_2 = 0;
+        if(sz_1 > 0){
+            sz_2++;
+        }
+        else if(sz_1 < 0){
+            sz_2--;
+        }
+        return sz_2;
+    }
+    public static String twoParameters(String szo_1,String szo_2){
+        return "first parameter: " + szo_1 + ", second parameter:  "+ szo_1 + ".";
+    }
+    public static Double triangleArea(Double sz_1, Double sz_2, Double sz_3){
+        Double sz_ki = -1.0;
+        if (sz_1 + sz_2 > sz_3){
+            if (sz_3 + sz_2 > sz_1){
+                if (sz_1 + sz_3 > sz_2){
+                    Double S = (sz_1 + sz_2 + sz_3)/2;
+                    Double T = S*(S - sz_1)*(S - sz_2)*(S - sz_3);
+                    sz_ki = Math.sqrt(T);
+                }
+            }
+        }
+        return sz_ki;
+    }
+    public static String secondDegreeFunction(Double sz_a,Double sz_b,Double sz_c){
+        Double sz_D = 0.0;
+        Double Min = 0.0;
+        String szo_ki = "";
+        if(sz_a == 0){
+            szo_ki = "nem masodfoku a fuggveny";
+        }
+        else{
+            sz_D = Math.pow(sz_b*-1,2)-(4*sz_a*sz_c);
+            if(sz_D < 0){
+                szo_ki = "nincs valos megoldas";
+            }
+            else if(sz_D == 0){
+                Min = (sz_b*-1)/(sz_a*2);
+                szo_ki = "X = " + sz_a +"X^2 + " + sz_b + "X + " + sz_c + " = " + Min;
+            }
+            else{
+                Double Min1 = (sz_b*-1)+Math.sqrt(sz_D)/(sz_a*2);
+                Double Min2 = (sz_b*-1)-Math.sqrt(sz_D)/(sz_a*2);
+                szo_ki = "X1 = " + sz_a +"X^2 + " + sz_b + "X + " + sz_c + " = " + Min1 + "\n" + "X2 = " + sz_a +"X^2 + " + sz_b + "X + " + sz_c + " = " + Min2;
+            }
+        }
+        return szo_ki;
+    }
+    public static void main(String[] args) {
+        System.out.println(signOfTheNumber(10));
+        System.out.println(signOfTheNumber(1));
+        System.out.println(signOfTheNumber(0));
+        System.out.println(signOfTheNumber(-10));
+        System.out.println(signOfTheNumber(-1));
+        System.out.println(twoParameters(2, 3));
+        System.out.println(twoParameters("2", 3));
+        System.out.println(twoParameters(2, "3"));
+        System.out.println(twoParameters("2", "3"));
+        System.out.println(twoParameters(4, 5));
+        System.out.println(twoParameters("4", 5));
+        System.out.println(twoParameters(4, "5"));
+        System.out.println(twoParameters("4", "5"));
+        System.out.println(triangleArea(3, 4, 0));
+        System.out.println(triangleArea(0, 1, 0));
+        System.out.println(triangleArea(3, 4, 5));
+        System.out.println(triangleArea(4, 6, 8));
+        System.out.println(triangleArea(3, 4, 7));
+        System.out.println(triangleArea(1, 2, 4));
+        System.out.println(secondDegreeFunction(0, 6, 5));
+        System.out.println(secondDegreeFunction(0, 1, 1));
+        System.out.println(secondDegreeFunction(1, 3, 4));
+        System.out.println(secondDegreeFunction(2, 4, 3));
+        System.out.println(secondDegreeFunction(2, -4, 2));
+        System.out.println(secondDegreeFunction(1, 0, -4));
+    }
+}
