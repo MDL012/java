@@ -1,0 +1,61 @@
+package Dolgozat.DDD;
+
+public class Metodusok2 {
+    public static double negyzetTerulet(double A, double B){
+        Double C = A*B;
+        if (A < 0 || B < 0) {
+            C = -1.0;
+        }
+        return C;
+    }
+    public static int harmadikSzog(int A, int B){
+        int C = 180-(A+B);
+        int D = C;
+        if (A < 0 || B < 0 || C < 0){D = -1;}
+        if (A == 0 || B == 0 || C == 0){D = -1;}
+        return D;
+    }
+    public static Boolean vanNagybetu(String A){
+        Boolean B = false;
+        if(A != A.toLowerCase()){
+            B = true;
+        }
+        return B;
+    }
+    public static String fejVagyIras(int A){
+        String B = "fej";
+        if(A == 0){
+            B = "elere esett";
+        }
+        if(A < 0){
+            B = "iras";
+        }
+        return B;
+    }
+    public static void main(String[] args){
+        System.out.println(negyzetTerulet(2, 3) == 6);
+        System.out.println(negyzetTerulet(0, 3) ==  0);
+        System.out.println(negyzetTerulet(2, 0) ==  0);
+        System.out.println(negyzetTerulet(-2, 3) == -1);
+        System.out.println(negyzetTerulet(2, -3) == -1);
+        System.out.println(negyzetTerulet(-2, -3) == -1);
+        System.out.println(harmadikSzog(20, 30) ==  130);
+        System.out.println(harmadikSzog(30, 40) ==  110);
+        System.out.println(harmadikSzog(90, 90) == -1);
+        System.out.println(harmadikSzog(80, 120) == -1);
+        System.out.println(harmadikSzog(0, 45) == -1);
+        System.out.println(harmadikSzog(45, 0) == -1);
+        System.out.println(harmadikSzog(-45, 45) == -1);
+        System.out.println(harmadikSzog(45, -45) == -1);
+        System.out.println(vanNagybetu("Alma") ==  true);
+        System.out.println(vanNagybetu("alma") ==  false);
+        System.out.println(vanNagybetu("alMa") ==  true);
+        System.out.println(vanNagybetu("123") ==  false);
+        System.out.println(vanNagybetu("") ==  false);
+        System.out.println(fejVagyIras(3) == "fej");
+        System.out.println(fejVagyIras(10) == "fej");
+        System.out.println(fejVagyIras(-3) == "iras");
+        System.out.println(fejVagyIras(-10) == "iras");
+        System.out.println(fejVagyIras(0) == "elere esett");
+    }
+}
