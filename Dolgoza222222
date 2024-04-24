@@ -1,0 +1,106 @@
+package Dolgozat;
+
+public class MetodusokDolgozat2 {
+    public static int masodfokuMegoldasSzam(double A,double B,double C){
+        int D = -1;
+        double disc = Math.pow(B, 2)-(4*A*C);
+        if(A != 0){
+            if(disc > 0){
+                D = 2;
+            }
+            if(disc == 0){
+                D = 1;
+            }
+            if(disc < 0){
+                D = 0;
+            }
+        
+        }
+        return D;
+    }
+    public static Boolean vanKisbetu(String A){
+        Boolean igaz = false;
+        String B = A.toUpperCase();
+        if(A != B){
+            igaz = true;
+        }
+        return igaz;
+    }
+    public static String getMeret(double A){
+        String B = "XS";
+        if(A >= 150){
+            B = "S";
+        }
+        if(A >= 160){
+            B = "M";
+        }
+        if(A >= 170){
+            B = "L";
+        }
+        if(A >= 180){
+            B = "XL";
+        }
+        if(A >= 190){
+            B = "XXL";
+        }
+        return B;
+    }
+    public static String rubikKockaSzin(int A){
+        String B = "invalid parameter";
+        switch (A){
+            case 1:
+                B = "yellow";
+                break;
+            case 2:
+                B = "red";
+                break;
+            case 3:
+                B = "orange";
+                break;
+            case 4:
+                B = "white";
+                break;
+            case 5:
+                B = "blue";
+                break;
+            case 6:
+                B = "green";
+                break;
+        }
+        return B;
+    }
+    public static void main(String[] args) {
+        System.out.println(masodfokuMegoldasSzam(0, 6, 5) == -1);
+        System.out.println(masodfokuMegoldasSzam(0, 1, 1) == -1);
+        System.out.println(masodfokuMegoldasSzam(1, 3, 4)== 0);
+        System.out.println(masodfokuMegoldasSzam(2, 4, 3)== 0);
+        System.out.println(masodfokuMegoldasSzam(2, -4, 2)== 1);
+        System.out.println(masodfokuMegoldasSzam(1, -2, 1)== 1);
+        System.out.println(masodfokuMegoldasSzam(1, 0, -4)== 2);
+        System.out.println(masodfokuMegoldasSzam(2, 2, -2)== 2);
+        System.out.println(vanKisbetu("alma") == true);
+        System.out.println(vanKisbetu("ALmA") == true);
+        System.out.println(vanKisbetu("ALMA") == false);
+        System.out.println(vanKisbetu("") == false);
+        System.out.println(vanKisbetu("123456") == false);
+        System.out.println(getMeret(100) == "XS");
+        System.out.println(getMeret(150) == "S");
+        System.out.println(getMeret(156) == "S");
+        System.out.println(getMeret(160) == "M");
+        System.out.println(getMeret(166) == "M");
+        System.out.println(getMeret(170) == "L");
+        System.out.println(getMeret(176) == "L");
+        System.out.println(getMeret(180) == "XL");
+        System.out.println(getMeret(186) == "XL");
+        System.out.println(getMeret(190) == "XXL");
+        System.out.println(getMeret(200) == "XXL");
+        System.out.println(rubikKockaSzin(1) == "yellow");
+        System.out.println(rubikKockaSzin(2) == "red");
+        System.out.println(rubikKockaSzin(3) == "orange");
+        System.out.println(rubikKockaSzin(4) == "white");
+        System.out.println(rubikKockaSzin(5) == "blue");
+        System.out.println(rubikKockaSzin(6) == "green");
+        System.out.println(rubikKockaSzin(7) == "invalid parameter");
+        System.out.println(rubikKockaSzin(-1) == "invalid parameter");
+    }
+}
