@@ -1,0 +1,58 @@
+import java.util.LinkedList;
+
+public class ShoppingList {
+    //We are going to represent a shopping list by a list containing strings.
+    //
+    //Create a linked list with the following items:
+    // eggs, milk, fish, apples, bread and chicken
+    //Create an application which prints out the answers to the following questions:
+    // - Do we have milk in the shopping list? (yes/no)
+    // - Do we have bananas in the shopping list? (yes/no)
+    //The full output of your main method should be the following:
+    //
+    //yes
+    //no
+    //
+    // The question have to be a method.
+
+
+
+    public static void main(String[] args) {
+
+    //A bevásárlólistát karakterláncokat tartalmazó listával fogjuk ábrázolni.
+    //
+    //Hozzon létre egy linkelt listát a következő elemekkel:
+    // tojás, tej, hal, alma, kenyér és csirke
+
+    LinkedList<String> szl_shop = new LinkedList<>();
+    szl_shop.add("tojás"); szl_shop.add("tej"); szl_shop.add("hal"); szl_shop.add("alma"); szl_shop.add("kenyér"); szl_shop.add("csirke");
+
+    //Hozzon létre egy alkalmazást, amely kinyomtatja a válaszokat a következő kérdésekre:
+    // - Van tejünk a bevásárlólistán? (igen nem)
+    // - Van banán a bevásárlólistán? (igen nem)
+    System.out.println("Van tejünk a bevásárlólistán?");
+    String igen = "nem";
+    for (String i : szl_shop) {
+        if (i == "tej") {
+            igen = "igen";
+        }
+    }
+    System.out.println("Válasz: (" + igen + ")");
+    System.out.println();
+    System.out.println("Van banán a bevásárlólistán?");
+    igen = "nem";
+    for (String i : szl_shop) {
+        if (i == "banán") {
+            igen = "igen";
+        }
+    }
+    System.out.println("Válasz: (" + igen + ")");
+    //A fő módszer teljes kimenete a következő legyen:
+    //
+    //Igen
+    //nem
+    //
+    // A kérdésnek módszernek kell lennie.
+    }
+
+}
