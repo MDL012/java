@@ -1,0 +1,105 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapIntroduction1 {
+    public static void main(String[] args) {
+
+        //We are going to play with maps. Feel free to use the built-in methods where possible.
+        //
+        //Create an empty map where the keys are integers and the values are characters
+
+
+        //Print out whether the map is empty or not
+
+
+        //Add the following key-value pairs to the map
+        //97 : a, 98 : b, 99 : c, 65 : A, 66 : B, 67 : C
+
+
+        //Print all the keys
+
+
+        //Print all the values
+
+
+        //Add value D with the key 68
+
+
+        //Print how many key-value pairs are in the map
+
+
+        //Print the value that is associated with key 99
+
+
+        //Remove the key-value pair with key 97 and print the associated value
+
+
+        //Print whether there is an associated value with key 100 or not
+
+
+        //Remove all the key-value pairs
+
+
+        //Print how many key-value pairs are in the map
+
+        //-------------------------------------------------------------------------------------------------------
+
+        //Játszani fogunk a térképekkel. Nyugodtan használja a beépített módszereket, ahol lehetséges.
+        //
+        //Készítsen üres térképet, ahol a kulcsok egész számok, az értékek pedig karakterek
+         HashMap<Integer, String> szHM = new HashMap<>();
+
+        //Nyomtassa ki, hogy a térkép üres-e vagy sem
+
+        System.out.println(szHM.isEmpty());
+        
+        //Adja hozzá a következő kulcs-érték párokat a térképhez
+        //97 : a, 98 : b, 99 : c, 65 : A, 66 : B, 67 : C
+        szHM.put(97 , "a");
+        szHM.put(98 , "b");
+        szHM.put(99 , "c");
+        szHM.put(65 , "A");
+        szHM.put(66 , "B");
+        szHM.put(67 , "C");
+
+        //Nyomtassa ki az összes kulcsot
+        System.out.println(szHM.keySet());
+
+        //Nyomtassa ki az összes értéket
+        System.out.println(szHM.values());
+
+        //D érték hozzáadása a 68-as billentyűvel
+        szHM.put(68, "D");
+
+        //Nyomtassa ki, hogy hány kulcs-érték pár van a térképen
+        System.out.println(szHM.size());
+
+        //Nyomtassa ki a 99-es kulcshoz tartozó értéket
+        System.out.println(szHM.get(99));
+
+        //Távolítsa el a kulcs-érték párt a 97-es kulccsal, és nyomtassa ki a hozzá tartozó értéket
+        System.out.println(szHM.get(97));
+        szHM.remove(97);
+        
+        //Nyomtassa ki, hogy van-e társított érték a 100-as kulccsal vagy sem
+        System.out.println(szHM.containsKey(100));
+
+        //Az összes kulcs-érték pár eltávolítása
+        szHM.clear();
+
+        //Nyomtassa ki, hogy hány kulcs-érték pár van a térképen
+        System.out.println(szHM.size());
+
+    }
+
+    // Output:
+    // true
+    // [97, 65, 98, 66, 99, 67]
+    // [a, A, b, B, c, C]
+    // 7
+    // c
+    // a
+    // false
+    // 0
+
+}
