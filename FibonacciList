@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+
+public class FibonacciList {
+
+    // The fibonacci sequence is a famous bit of mathematics,
+    // and it happens to have a recursive definition.
+    // The first two values in the sequence are 0 and 1 (essentially 2 base cases).
+    // Each subsequent value is the sum of the previous two values,
+    // so the whole sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21 and so on.
+    // Define a fibonacci(n) method that
+    // returns a list of the nth fibonacci numbers,
+    // with n=0 representing the start of the sequence.
+    // The method should be able to handle invalid input (e.g. negative numbers)
+    // Example:
+    // fibonacci(4) - > [0, 1, 1, 2]
+    // fibonacci(10) - > [0, 1, 1, 2, 3, 5, 8, 13, 21, 33]
+
+
+    // A fibonacci sorozat a matematika híres darabja,
+    // és történetesen rekurzív definíciója van.
+    // A sorozat első két értéke 0 és 1 (lényegében 2 alapeset).
+    // Minden következő érték az előző két érték összege,
+    // tehát az egész sorozat a következő: 0, 1, 1, 2, 3, 5, 8, 13, 21 és így tovább.
+    // Határozzon meg egy fibonacci(n) metódust, amely
+    // visszaadja az n-edik Fibonacci-számok listáját,
+    // ahol n=0 a sorozat kezdetét jelenti.
+    // A metódusnak képesnek kell lennie az érvénytelen bevitel kezelésére (pl. negatív számok)
+    // Példa:
+    // fibonacci(4) - > [0, 1, 1, 2]
+    // fibonacci(10) - > [0, 1, 1, 2, 3, 5, 8, 13, 21, 33]
+
+    public static void main(String[] args) {
+        System.out.println(fibo(-2));
+    }
+    public static ArrayList fibo(int n){
+        ArrayList<String> list = new ArrayList<>();
+        if(n < 0){
+            list.add("Negatív szám nem használható!");
+        }
+        else{
+            ArrayList<Integer> list2 = new ArrayList<>();
+            int sz1 = 1;
+            int sz2 = 1;
+            int sz3 = 0;
+            list2.add(sz3);
+            list2.add(sz2);
+            list2.add(sz1);
+            n = n - 1;
+            if (n == 0){
+                sz3=0;
+            }
+            else if (n <= 2){
+                sz3=1;
+            }
+            else{
+                for (int i = 3; i <= n; i+=1) {
+                    sz3=sz1+sz2;
+                    sz1=sz2;
+                    sz2=sz3;
+                    list2.add(sz3);
+                }
+                
+            }
+            for (int i = 0; i < list2.size(); i+=1) {
+                list.add(""+list2.get(i));
+            }
+        }
+        return list;
+    }
+}
