@@ -1,0 +1,13 @@
+li{
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+}
+div{
+    background-color: yellow;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
