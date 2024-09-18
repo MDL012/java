@@ -1,0 +1,43 @@
+body{
+    background-color: bisque;
+}
+#nagydiv{
+    display: flex;
+    height: 600px;
+    width: 600px;
+    flex-direction: column;
+}
+#f1{
+    background-color:aqua;
+    flex: 1;
+}
+#f2{
+    background-color: blue;
+    flex: 1;
+}
+#kisdiv{
+    display: flex;
+    flex: 6;
+}
+#o1{
+    background-color: orange;
+    flex: 1;
+}
+#o2{
+    background-color: red;
+    margin-left: 40px;
+    margin-right: 40px;
+    flex: 4;
+}
+#o3{
+    background-color: purple;
+    flex: 1;
+}
+#fekete{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+    right: 200px;
+    top: 600px;
+}
