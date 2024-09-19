@@ -1,0 +1,19 @@
+Check that the string “To be, or not to be, that is the question” contains a specific substring:
+"bee"
+"to be"
+Use a string method.
+Answer in a complete sentence.
+
+Ellenőrizze, hogy a „Lenni vagy nem lenni, ez a kérdés” karakterlánc tartalmaz-e egy adott részstringet:
+"méh"
+"lenni"
+Használjon karakterlánc-módszert.
+Teljes mondatban válaszoljon.
+
+void main()
+{
+  String hamleth = "Lenni vagy nem lenni, ez a kérdés";
+  for(int i = 0;i<hamleth.length;i++){
+    print(hamleth[i]);
+  }
+}
