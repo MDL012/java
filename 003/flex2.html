@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="fehér">
+        <div class="lila">
+            <div></div><div></div><div></div>
+        </div>
+
+        <div class="sázö">
+            <div class="sárga">
+            </div>
+            <div class="zöld">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<style>
+    .fehér{
+        margin: 30px;
+    }
+    .sázö{
+        display: flex;
+        height: 300px;
+
+    }
+    .lila{
+        display: flex;
+        background-color: purple;
+        width: 100%;
+    }
+    .lila div{
+        margin: 10px;
+        background-color: aqua;
+        width: 80px;
+        height: 20px;
+    }
+    .sárga{
+        background-color: yellow;
+        flex-grow: 2;
+    }
+    .zöld{
+        background-color: green;
+        flex-grow: 1;
+    }
+</style>
