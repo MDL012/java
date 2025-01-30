@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="red">
+            <div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+
+    <div class="two">
+        <div class="blue">
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div class="green">
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style setup>
+    body{
+        margin: 50px;
+    }
+    .red{
+        margin: 10px;
+        display: flex;
+        background-color: rgb(237, 28, 36);
+        height: 90px;
+        
+    }
+    .red div{
+        margin: 25px;
+        background-color: rgb(195, 195, 195);
+        width: 100px;
+        height: 30px;
+    }
+
+    .two{
+        display: flex;
+        height: 750px;
+    }
+
+    .blue{
+        background-color: rgb(0, 162, 232);
+        margin: 10px;
+        padding: 20px;
+    }
+    .blue div{
+        margin: 10px;
+        background-color: rgb(195, 195, 195);
+        width: 80px;
+        height: 30px;
+    }
+    .green{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(34, 177, 76);
+        margin: 10px;
+        width: 100%;
+    }
+    .green div{
+        background-color: rgb(127, 127, 127);
+        width: 50%;
+        height: 50%;
+    }
+</style>
