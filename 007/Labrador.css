@@ -1,0 +1,29 @@
+.card{
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    width: 450px;
+    font-weight: bold;
+    font-family: Arial;
+}
+.cardName{
+    background-color: rgb(247, 247, 247);
+    border-radius: 15px 15px 0px 0px;
+    font-size: 25px;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+.cardText p:nth-child(1){
+    font-size: 50px;
+    margin: 25px;
+    font-weight: lighter;
+}
+.cardButton{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    width: 420px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px;
+    padding: 10px;
+}
