@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(229, 213, 162);
+    margin: 0;
+    padding: 0;
+}
+#Head{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+    padding: 50px;
+    background-image: url('Képek/hatterkep.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: rgb(99, 116, 87);
+    color: white;
+}
+a:hover{
+    border: 1px solid yellow;
+}
+a:active{
+    color: yellow;
+    background-color: rgb(78, 92, 68);
+}
+#back{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 3px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+#Szöveg{
+    font-size: 20px;
+    text-align:justify;
+    padding: 0 200px 0 200px;
+}
+#Gombok{
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+}
+#Gombok *{
+    font-size: 30px;
+    width: 230px;
+    margin: 40px;
+    display: block;
+}
